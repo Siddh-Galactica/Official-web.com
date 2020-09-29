@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Siddh Galactica</title>
+</head>
+<body>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	body{
+		display: flex;
+		height: 2880px;
+		width: 100%;
+		overflow-x: hidden;
+		background-color: rgba(250,250,250,.9);
+	}	
+	.container{
+		position: relative;height: 100%;
+		width: 100%;
+	}
+	.main{
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		background-image: url(nature.jpg);
+		clip-path: polygon(0 0 , 100% 0, 100% 85%, 50% 100% ,0 85%);
+		background-size: 100%;
+		border-bottom: 2px solid rgba(100,100,100,.9);
+		z-index: 1;
+	}
+	.nav{
+		position: fixed;
+		top: 10px;
+		height: 45px;
+		width: 100%;
+		background-color: rgba(250,250,250,.4);
+		overflow: hidden;
+		z-index: 2;
+	}
+	.active1, .active2, .active3, .active4{
+		position: relative;
+		float: left;
+		list-style-type: none;
+		line-height: 45px;
+		text-decoration: none;
+		font-family: sans-serif;
+		border-right:  3px solid rgba(20,20,20,.7);
+		padding:  0px 15px 15px 15px;
+		font-size: 20px;
+		background-color: rgba(255,255,255,.2);
+	}
+	.active1:hover, .active2:hover, .active3:hover, .active4:hover{
+		cursor: pointer;
+		background-color: rgba(50,50,50,.6);	
+	}
+	.text1{
+		position: relative;
+		top: 100px;
+		left: 380px;
+		height: 200px;
+		width: 500px;
+		overflow: hidden;
+		border-radius: 20px;
+		align-items: center;
+		text-align: center;
+	}
+	.text1:hover h1{
+		top: 15px;
+
+	}
+	.search {
+		float: right;
+		margin: -10px 50px 0px 0px;
+	}
+	.search input{
+		height: 28px;
+		width: 300px;
+		border-radius: 30px;
+		padding: 0px 0px 0px 20px;
+		border: 2px solid black;
+		position: relative;
+		top: 1px;
+	}
+	.main a{
+		height: 100%;
+		width: 100%;
+		font-family: sans-serif;
+		text-decoration: none;
+		color: rgb(30,30,30);
+	}
+	a{
+
+		font-family: sans-serif;
+		text-decoration: none;
+		color: rgb(30,30,30);
+	
+	}
+	.text1 h1{
+		position: relative;
+		top: 40px;
+		font-family: sans-serif;
+		font-size: 45px;
+		transition-duration: 1s;
+	}
+	.text1 a{
+		position: relative;
+		top: 30px;
+		left: 0;
+		opacity: 0;
+		transition-duration: .8s;
+		font-family: sans-serif;
+		justify-content:  center;
+	}
+	.text1:hover a{
+		opacity: 1;
+
+	}
+	.text1 button{
+		height: 40px;
+		width: 150px;
+		background: transparent;
+		border : 2px solid rgba(250,250,255,.9);
+		padding: 10px 15px;
+		font-size: 16px;
+		overflow: hidden;
+		border-radius: 60px;
+		transition-duration: .5s;
+		color: #fff;
+	}
+	 button:hover{
+		cursor: pointer;
+		background-color: rgba(255,255,255,.99);
+		border : 1px solid rgba(0,200,250,.9);
+		box-shadow: 0 0 20px 0 rgba(0,0,0,.5); 
+		color: #000;
+	}
+	.About1{
+		position: relative;
+		top: 10px;
+		width: 100%;
+		height: 100vh;
+		background-image:  linear-gradient(-45deg, rgba(255,255,255,.9) 50%, rgba(20,20,255,.3) 50%);
+		background-size: 100%;
+	}
+	.About2{
+		position: relative;
+		top: 00px;
+		align-items: center;
+		border-radius: 40px;
+		margin-right: 100px;
+		margin-left: 100px;
+		padding-bottom: 100px;
+		padding-top: 100px; 
+	}
+
+	.age{
+		position: relative;
+		left: 400px;
+		height: 60px;
+		width: 23%;
+		border: 2px solid white;
+		border-radius: 5px;
+		font-family: sans-serif;
+		font-size: 30px;
+		overflow: hidden;
+		transition-duration: 1s;
+		background-color: rgba(0,250,250,.7);
+		color: rgb(0,0,0);
+	}
+	.age:hover, .yout:hover, .hobby:hover,.best:hover{
+		box-shadow: 0 0 40px 0 rgba(40,40,40,.99);
+	}
+	.age a{
+		position: relative;
+		line-height: 60px;
+		top: 0;
+		left: 100px;
+		transition-duration: .6s;
+		color: black;
+	}
+	.age:hover a{
+		top: -100px;
+		left: 100px;
+
+	}
+	.age span{
+ 	position: relative;
+ 	line-height: 60px;
+ 	top: 100px;
+		left: 0px;
+		transition-duration: .6s;transition-delay: .1s;
+	}
+	.age:hover span{
+		top: 0;
+		left: 0px;
+	}
+	.yout{
+		position: relative;
+		left: 400px;
+		height: 60px;
+		width: 23%;
+		border: 2px solid white;
+		border-radius: 5px;
+		font-family: sans-serif;
+		font-size: 30px;
+		overflow: hidden;
+		transition-duration: 1s;
+		background-color: rgba(20,255,20,.9);
+		color: rgb(0,0,0);
+		margin-top: 60px;
+	}
+	.yout span{
+		position: relative;
+		line-height: 60px;
+		top: -61px;
+		left: 60px;
+		transition-duration: .6s;
+	}
+	.yout:hover span{
+		top: -145px;
+		left: 60px;
+	}
+	.yout a{
+ 	position: relative;
+ 	line-height: 60px;
+ 	top: 100px;
+		left: 19px;
+		transition-duration: .6s;
+		transition-delay: .1s;
+		color: black;
+	}
+	.yout:hover a{
+		top: 0px;
+		left: 19px;
+	}
+		.hobby{
+		position: relative;
+		left: 400px;
+		height: 60px;
+		width: 23%;
+		border: 2px solid white;
+		border-radius: 5px;
+		font-family: sans-serif;
+		font-size: 30px;
+		overflow: hidden;
+		transition-duration: 1s;
+		background-color: rgba(20,20,200,.9);
+		color: rgb(0,0,0);
+		margin-top: 60px;
+	}
+	.hobby a{
+		position: relative;
+		line-height: 60px;
+		top: 0;
+		left: 80px;
+		transition-duration: .6s;
+		color: black;
+	}
+	.hobby:hover a{
+		top: -100px;
+		left: 80px;
+
+	}
+	.hobby span{
+ 	position: relative;
+ 	line-height: 60px;
+ 	top: 100px;
+		left: -20px;
+		transition-duration: .6s;transition-delay: .1s;
+	}
+	.hobby:hover span{
+		top: 0;
+		left: -20px;
+	}
+		.best{
+		position: relative;
+		left: 400px;
+		height: 60px;
+		width: 23%;
+		border: 2px solid black;
+		border-radius: 5px;
+		font-family: sans-serif;
+		font-size: 30px;
+		overflow: hidden;
+		transition-duration: 1s;
+		background-color: rgba(250,0,0,.9);
+		color: rgb(0,0,0);
+		margin-top: 60px;
+	}
+	.best a{
+		position: relative;
+		line-height: 60px;
+		top: 0;
+		left: 70px;
+		transition-duration: .6s;
+		color: black;
+	}
+	.best:hover a{
+		top: -100px;
+		left: 70px;
+
+	}
+	.best span{
+ 	position: relative;
+ 	line-height: 60px;
+ 	top: 100px;
+		left: -25px;
+		transition-duration: .6s;transition-delay: .1s;
+	}
+	.best:hover span{
+		top: 0;
+		left: -25px;
+	}
+	.Knowledge{
+		position: relative;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100vh;
+		background-image: linear-gradient(320deg, #16c9f6 55%, #eee 0%);
+		background-size: 100%;
+	}
+	.code{
+		position: relative;
+		top: 50px;
+		left: 380px;
+		height: 500px;
+		width: 500px;
+		border: 2px solid black;
+		border-radius: 20px;
+		overflow: hidden;
+		perspective: 800px;
+
+		background-color: rgba(250,250,250,.99);
+	}
+
+	.content{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+
+		transform-style: preserve-3d; 
+	
+		transition-duration: 1s;
+	}
+	.code:hover .content{
+		transform: rotateY(180deg);
+	}
+	.face, .codesin{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		backface-visibility: hidden;
+		text-align: center;
+		line-height: 500px;
+		background-color: rgba(250,250,250,.99);
+		border-radius: 20px;
+		font-family: sans-serif;
+		font-size: 12px;
+	}
+	.codesin{
+		transform: rotateY(180deg);
+		height: 200%;
+		background-color: rgba(55,20,25,.9);
+		color: white;
+		top: -150px;
+	}
+	#p1{
+		color: white;
+		text-align: center;
+		position: absolute;top: 100px;
+		left: 43%;
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	#p2{
+		color: white;
+		text-align: center;
+		position: absolute;top: 150px;
+		left: 39%;
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	#p3{
+		color: white;
+		text-align: center;
+		position: absolute;top: 200px;
+		left: 43%;
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	#p4{
+		color: white;
+		text-align: center;
+		position: absolute;top: 250px;
+		left: 37%;
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	#p5{
+		color: white;
+		text-align: center;
+		position: absolute;top: 300px;
+		left: 42%;
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	.Creations1{
+		position: relative;
+		top: 0;
+		left: 0px;
+		height: 100vh;
+		width: 100%;
+		background-image: url(road.jpg); 
+		overflow: hidden;
+		background-size: 100%;
+		background-size: 100%;clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 100%, 25% 100%, 0 85%);
+	}
+	.name1{
+		position: relative;
+		top: 20px;
+		left: 260px;
+		height: 30px;
+		width: 600px;
+		background-color: rgba(20,20,20,.3);
+		border: 2px solid white;
+
+	}
+	.name1 a{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		line-height: 30px;
+		text-align: center;
+	}
+	.download1{
+		position: relative;
+		top: -15px;
+		left: 860px;
+		height: 34px;
+		width: 140px;
+		
+	}
+	.download1 button{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		color: white;
+		background-color: rgba(50,50,255,.69);
+		padding: 5px 10px 5px 10px;
+	}
+	.download1:hover button{
+		cursor: pointer;
+		background-color: rgba(10,10,255,.69);
+	}
+	.preview{
+		position: relative;
+		top: 10px;
+		left: 100px;
+		border: 3px solid rgba(205,205,.0,.9);
+		border-radius: 30px;
+		overflow: hidden;
+		height: 390px;
+		width: 1040px;
+	}
+	.preview img{
+
+		position: relative;
+		height: 100%;
+		width: 100%;
+		top: 0px;
+		left: 0;
+	}
+	.footer{
+		position: relative;
+		top: 2px;
+		height: 70vh;
+		width: 100%;
+		background-color: rgba(0,0,0,.8);
+		color:rgb(200,200,200);
+	}
+	.text3{
+		position: relative;
+		top: 50px;
+		left: 100px;
+		height: 150px;
+		text-align: justify;
+		width: 600px;
+		border: 2px solid white;
+		padding-top: 60px;
+		padding-right: 20px;
+		padding-left: 20px; 
+		box-shadow: 0px 0px 30px 0px rgba(255,255,255,8);
+	
+	}
+	.text3 h1{
+		position: relative;top: -20px;
+		left: 0px;
+	}
+	.footer a{
+		position: relative;
+		top: -100px;
+		left: 1000px;
+		background-color: rgb(255,255,255);
+		padding: 80px 30px 30px 30px;
+		border-radius: 50%;
+	}
+	.fa-youtube-square{
+		color: red;
+	}
+	.footer h4{
+		position: relative;top: 60px;
+		left: 410px;
+		color: yellow;
+	}
+	.fa-home, .fa-user-o, .fa-book,.fa-pencil-square{
+		margin-right: 10px;
+	}
+	.main img{
+		position: relative;top: 100px;
+		left: 560px;
+		height: 150px;
+		width: 150px;
+		clip-path: circle(50% at 50% 50%);
+	}
+	html{
+		scroll-behavior: smooth;
+	}
+	.fa-search{
+		position: relative;
+		top: 25px;
+		left: -25px;
+	}
+	.fa-close, .fa-bars{
+		display: none;
+	}
+	@media (max-width: 730px){
+
+	.main{
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		background-image: url(nature.jpg);
+		clip-path: polygon(0 0 , 100% 0, 100% 85%, 50% 100% ,0 85%);
+		background-size: cover;
+		border-bottom: 2px solid rgba(100,100,100,.9);
+		z-index: 1;
+	}
+	.text1{
+		position: relative;top: 100px;
+		left: 0px;
+	}
+	.main img{
+		position: relative;top: 100px;
+		left: 180px;
+	}
+	.nav{
+		position: fixed;
+		top: 0px;
+		left: -500px;
+		height: 100vh;
+		width: 60%;
+		background-color: rgba(0,0,0,.7);
+		z-index: 11;
+		display: block;
+		transition-duration: .8s;
+	}
+
+	.search{
+		display: flex;
+		position: fixed;top: 0px;
+		left: 0px;
+		height: 30px;
+		width: 200px;
+	}
+	.nav-links ul{
+		float: left;
+		width: 80%;
+		background-color: rgba(255,255,255,.99);
+	}
+
+	.About1{
+		position: relative;
+		top: 10px;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		background-image:  linear-gradient(-45deg, rgba(255,255,255,.9) 50%, rgba(20,20,255,.3) 50%);
+		background-size: 100%;
+
+	}
+	.About2{
+		position: relative;
+		top: -20px;
+		left: -370px;
+		height: 80%;
+		width: 80%;
+	}
+	.age{
+		width: 200px;
+		height: 60px;
+		padding-right: 50px;
+	}
+	.yout{
+		width: 250px;
+		height: 60px;
+	}
+	.yout span{
+		position: relative;
+		left: 75px;
+	}
+	.yout:hover span{
+		top: -200px;
+		left: 75px;
+	}
+	.hobby{
+
+		width: 250px;
+		height: 60px;
+		
+	}
+	.best{
+		width: 220px;
+		height: 60px;
+		padding-left: 30px;
+		}
+	.best:hover span{
+		position: relative;
+		left: -50px;
+	}
+	.best span{
+		position: relative;
+		left: -50px;
+	}
+	.best a{
+		position: relative;
+		left: 45px;
+	}
+	.best:hover a{
+		position: relative;
+		left: 45px;
+		top: -200px;
+	}
+	.Knowledge{
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		background-size: 100%;
+		background-image: linear-gradient(320deg, #16c9f6 55%, #eee 0%);
+	}
+	.code{
+		position: relative;
+		top: 60px;
+		left: 36px;
+		width: 85%;
+		height: 80%;
+	}
+	#p1{
+		left: 40%;}
+	
+	#p2{
+		left: 36%;}
+	
+	#p3{
+		left: 41%;}
+	
+	#p4{
+		left: 33%;}
+	
+	#p5{
+		left: 38%;}
+	.Creations1{
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		background-size: 100% 100%;
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 100%, 25% 100%, 0 85%);
+		background-image: url(road.jpg); 
+	}
+	.name1{
+		position: relative;
+		top: 20px;
+		left: 40px;
+		width: 60%;
+		height: 30px;
+	}
+	.download1{
+		position: relative;
+		top: -15px;
+		left: 334px;
+		width: 25%;
+		height: 34px;
+	}
+	.preview{
+		position: relative;
+		top: 20px;
+		left: 20px;
+		height: 70%;
+		width: 90%;
+	}
+	.footer{
+		position: relative;
+		top: 2px;
+		left: 0;
+		height: 70vh;
+		width: 100%;
+	}
+	.text3{
+		position: relative;
+		top: 0px;
+		left: 0;
+		height: 50%;
+		width: 60%;
+		box-shadow: 10px 10px 30px 0px rgba(255,255,255,8);
+	}
+	.footer h4{
+		position: relative;
+		top: 0px;
+		left: 20px;
+	}
+	.footer a{
+		position: relative;
+		top: -200px;
+		left: 350px;
+	}
+	body{
+		height: 2800px;
+	}
+	.search{
+		position: absolute;
+	}
+	.search input{
+		position: absolute;
+		top: 30px;
+		left: 50px;
+		height: 30px;
+		width: 200px;
+	}
+	.fa-search{
+		position: absolute;
+		top: 36px;
+		left: 20px;
+		color: white;
+	}
+	.nav-links{
+		position: relative;
+		top: 100px;
+		margin-right: 50px;
+		display: block;
+		width: 400px;
+
+	}
+	.nav-links li{
+		position: relative;width: 74%;
+		margin: 10px 5px 10px 5px;
+	}
+	.fa-close{
+		color: white;
+		position: relative;
+		top: 5px;
+		left: 270px;
+		cursor: pointer;
+		display: initial;
+	}
+	.fa-bars{
+		position: relative;
+		top: 10px;
+		left: 20px;
+		color: black;
+		display: initial;
+		z-index: 10;
+		cursor: pointer;
+	}
+	.open{
+		position: fixed;
+		top: 10px;
+		height: 40px;
+		width: 100%;
+		background-color: rgba(200,200,200,.7);
+		z-index: 10;
+	}
+	}
+</style>
+<script>
+
+function closenav () {
+
+	var a = document.getElementById('nav');
+
+	a.style.left = "-500px";
+}
+
+function opennav () {
+
+	var a = document.getElementById('nav');
+
+	a.style.left = "0px";
+}
+
+</script>
+<div class="container">
+		<div class="nav" id="nav">
+
+			    <i class="fa fa-close" onclick="closenav()"></i>
+			<div class="nav-links">
+			<ul>
+				<li class="active1"><i class="fa fa-home"></i><a href="#home">Home</a></li>
+				<li class="active2"><i class="fa fa-user-o"></i><a href="#about">About</a></li>
+				<li class="active3"><i class="fa fa-book"></i><a href="#know">Knowledge</a></li>
+				<li class="active4"><i class="fa fa-pencil-square"></i><a href="#quiz">Quiz</a></li>
+			</ul>
+		</div>
+			<div class="search"><i class="fa fa-search"></i>
+				<form action="https://www.google.com/search?q=" method="GET" id="Search-function">
+			<input type="search" name="" placeholder="Search........" value="" id="searchbar">
+			</form>
+			</div>
+		</div>
+		<div class="open">
+		<i class="fa fa-bars" onclick="opennav()"></i>
+	</div>
+	<div class="main" id="home">
+		<a href="https://www.youtube.com/channel/UClHf1fbHOM9LTD0UYrWlQZw?view_as=subscriber">
+		<img src="logo.jpg">
+		</a>
+		<div class="text1">
+			<h1>Sarthak Jaiswal</h1>
+			<a href="https://mail.google.com/mail/u/0/?pli=1#sent?compose=GTvVlcSHwsPWnWWLGpmmDZfcTnChhtkQKdCCZSpBslnCGMgckkGPsfNMRKfJrTGBFSxhsMsJbrmQd"><button>Contact Me</button></a>
+			</div>
+	</div>
+	<div class="About1" id="about">
+	<div class="About2">
+		<div class="age">
+		<a href="#">Age</a>
+		<span>14 years</span>
+	</div>
+		<div class="yout">
+		<a href="https://www.youtube.com/channel/UClHf1fbHOM9LTD0UYrWlQZw?view_as=subscriber">Siddh Galactica</a>
+		<span>Youtube</span>
+	</div>
+		<div class="hobby">
+		<a href="#">Hobby</a>
+		<span>Coding</span>
+	</div>
+
+		<div class="best">
+		<a href="#">Country</a>
+		<span>India</span>
+	</div>
+	</div> 
+</div>
+	<div class="Knowledge" id="know">
+		<div class="code">
+			<div class="content">
+				<div class="face">
+					<h1>Sarthak's Coding Knowledge</h1>
+				</div>
+				<div class="codesin">
+					<h1>I code in:</h1>
+					<p id="p1">HTML</p>
+					<p id="p2">C Sharp</p>
+					<p id="p3">CSS</p>
+					<p id="p4">Javascript</p>
+					<p id="p5">Python</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Creations1" id="quiz">
+		<div class="Creations2">
+		<div class="name1">
+			<a href="https://drive.google.com/file/d/1fQ1wEGMMyIdWU8_SnX9YK7BF7RdPvByI/view?usp=sharing">Quiz</a>
+		</div>
+		<div class="download1">
+			<a href="tq.exe" download="Quiz"><button>Download</button></a>
+		</div>
+	</div>
+		<div class="preview">
+			<img src="tq.png" height="500px" width="740px" />
+		</div>
+
+	</div>
+	<div class="footer">
+		<div class="text3">
+			<h1>Description:</h1>
+		<p>Hello everyone! I am sarthak, a coder who loves coding.<br><br>I also have a youtube channel which you can easily access by clicking on the button here.<br><br>I spent a lot of time on this website so I really hope you like it.</p>
+		</div>
+		<a href="https://www.youtube.com/channel/UClHf1fbHOM9LTD0UYrWlQZw?view_as=subscriber">
+			<i class="fa fa-5x fa-youtube-square"></i>
+		</a>
+		<h4>Copyright &copy; 2020 All rights reserved | With regards from Sarthak</h4>
+</div>
+	</div>
+</body>
+</html>
